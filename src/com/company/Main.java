@@ -27,21 +27,26 @@ public class Main {
         movieGeners.addAll(triller);
         movieGeners.addAll(drama);
 
-        System.out.print("Movie Geners : "); //вывод на консоль
+        System.out.print("Movie Geners : "); //вывод на консоль все фильмы
         for (String mg : movieGeners) {
             System.out.print(mg + ", ");
         }
         System.out.println();
 
-        for (int i=0; i < fantastic.size(); i++) { //жанр фантастика
-            System.out.print(fantastic.get(i) + " ");
+        System.out.print("Fantastic films : ");
+        for (int i=0; i < movieGeners.size(); i++) { //жанр фантастика
+            for (int j=0; j < fantastic.size(); j++) {
+                System.out.print(fantastic.pop() + " "); //извлечение и удаление элемента из стека
+            }
         }
         System.out.println();
 
+        System.out.print("Triller films : ");
         for (int i = 0; i < triller.size(); i++) //жанр триллер
             System.out.print(triller.get(i) + " ");
         System.out.println();
 
+        System.out.print("Drama films : ");
         for (int i = 0; i < drama.size(); i++) //жанр драма
             System.out.print(drama.get(i) + " ");
         System.out.println();
